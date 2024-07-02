@@ -3,10 +3,11 @@
   class="section-{{ section.id }}-padding gradient color-{{ section.settings.color_scheme }}"
   data-section="{{ section.id }}"
 >
-
-  <h1>{{product.title | upcase}}</h1>
-  {% assign title_upper = product.title | upcase  %}
-  <h2>variable: {{ title_upper }}</h2>
+  <div>
+    <h2>{{ shop.name |  upcase }}</h2>
+    <h1>{{product.name}}</h1>
+    <p>{{product.price | money}}</p>
+  </div>
   {{ 'section-main-product.css' | asset_url | stylesheet_tag }}
   {{ 'component-accordion.css' | asset_url | stylesheet_tag }}
   {{ 'component-price.css' | asset_url | stylesheet_tag }}
